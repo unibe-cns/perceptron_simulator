@@ -1,0 +1,140 @@
+
+body{
+    font-family: Calibri;
+}
+
+td{
+    width: 40px;
+    text-align: center;
+}    
+
+td.y{
+    cursor: pointer;
+    background-color: #E0E0E0;
+    border: 1px solid #AFAFAF;
+    border-radius: 3px;
+}
+
+a{
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    color: #FFF;
+    background-color: #0064B4;
+    border: 1px solid #AFAFAF;
+    border-radius: 3px;
+    padding: 4px;
+    width: 100px;
+    margin: 2px;
+}
+
+input[type="submit"]:disabled {
+    color: #000;
+    background-color: #C0C0C0;
+}
+
+input[type="number"], input[type="text"]:enabled, select {
+    margin: 5px;
+    background-color: #E0E0E0;
+    border: 1px solid #AFAFAF;
+    border-radius: 3px;
+    padding: 4px;
+    width: 70px;
+    text-align: center;
+}
+
+select{
+    width: 125px;
+}
+
+.value{
+    position:absolute;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    width: 44px;
+    color: #000;
+}
+
+#v, #inp1, #inp2{
+    color: #FFF;
+}
+progress {
+  background-color: #f3f3f3;
+  border: 1px solid #AFAFAF;
+  height: 18px;
+  border-radius: 9px;
+  width: 280px;
+}
+progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 9px;
+}
+progress::-webkit-progress-value {
+  background-color: #f3f3f3;
+  border-radius: 9px;
+}
+progress::-moz-progress-bar {
+  background-color: #0064B4;
+  border-radius: 9px;
+}
+
+.settingtext{
+    display: inline-block;
+    width: 150px;
+}    
+
+.box{
+    border: 1px solid #BFBFBF;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FAFAFA;
+}
+
+.box:hover{
+    cursor: move;
+}    
+
+#neuronbox{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+
+#taskbox{
+    position:absolute;
+    top:10px;
+    left:530px;
+    width: 290px;
+    height:365px;
+}
+
+#testbox{
+    position:absolute;
+    top:415px;
+    left:530px;
+    width:290px;
+    height:220px;
+}    
+
+#coordinatesystembox{
+    position:absolute;
+    top:10px;
+    left: 860px;
+}  
+
+#questionbox{
+    position: absolute;
+    top: 415px;
+    left: 10px;
+    width: 480px;
+    height:220px;
+}
+
+#slider{
+    width:125px;
+    float:right;
+    margin-right: 5px;
+}  

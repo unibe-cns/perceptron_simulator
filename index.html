@@ -1,0 +1,80 @@
+<!doctype html>
+<html xml:lang="de" lang="de">
+<title>Perceptron</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script src="jslib/jquery-1.11.3.min.js"></script>
+<script src="jslib/jquery-ui.js"></script>
+<script src="jslib/jcanvas.min.js"></script>
+<script src="main.js"></script>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="jquery-ui.css">
+
+</head>
+
+<body>
+
+<!--neuronbox //-->
+<div id="neuronbox" class="box">
+    <canvas id="can1" width="500" height="380" style="margin:-10px;"></canvas>
+    <input type="text" class="value" id="v" disabled="disabled" value="0" style="position:absolute;left:228px;top:190px;"></input>
+    <input type="text" class="value" id="inp1" disabled="disabled" value="0" style="position:absolute;left:77px;top:330px;"></input>
+    <input type="text" class="value" id="inp2" disabled="disabled" value="0" style="position:absolute;left:377px;top:330px;"></input>
+    <input type="text" class="value" id="w1" disabled="disabled" value="0.5" style="position:absolute;left:140px;top:265px;"></input>
+    <input type="text" class="value" id="w2" disabled="disabled" value="0.5" style="position:absolute;left:315px;top:265px;"></input>
+    <div style="position:absolute;left:230px;top:0px;">Output</div>
+    <input type="text" class="value" id="out" disabled="disabled" value="0" style="position:absolute;left:230px;top:17px;"></input>
+    <div style="position:absolute;left:315px;top:0px;">Goal</div>
+    <input type="text" class="value" id="goal" disabled="disabled" value="0" style="position:absolute;left:310px;top:17px;"></input>
+    <div style="position:absolute;left:405px;top:0px;">Error</div>
+    <input type="text" class="value" id="error" disabled="disabled" value="0" style="position:absolute;left:400px;top:17px;"></input>
+    <div id="afimage" style="position:absolute;left:202px;top:80px;"><img src="clip.png" width="100" height="60" /></div>
+</div>
+
+<!--coordinatesystembox //-->
+<div id="coordinatesystembox" class="box">
+    <canvas id="can2" width="250" height="250"></canvas>
+</div>
+
+<!--taskbox //-->
+<div id="taskbox" class="box">
+    <b>Truth table</b>
+    <table id="task">
+    <tr><th>x<sub>1</sub></th><th>x<sub>2</sub></th><th>d</th></tr>
+    <tr><td class="x1">0</td><td class="x2">0</td><td class="y" id="point00">0</td></tr>
+    <tr><td class="x1">0</td><td class="x2">1</td><td class="y" id="point01">0</td></tr>
+    <tr><td class="x1">1</td><td class="x2">0</td><td class="y" id="point10">0</td></tr>
+    <tr><td class="x1">1</td><td class="x2">1</td><td class="y" id="point11">0</td></tr>
+    </table>
+
+    <span class="settingtext">iteration steps</span> <input type="number" id="iterationsteps" min="1" value="5"></input><br />
+    <span class="settingtext">learning rate</span> <input type="text" id="learningrate" value="0.05"></input><br />
+    <span class="settingtext">activation function</span> <select id="activationfunction"><option>clip</option><option>sigmoid</option><option value="step">step function</option></select><br />
+    <span class="settingtext">simulation speed</span><div id="slider"></div><br />
+
+    <input type="submit" value="train" id="learn"> <input type="submit" value="stop" id="stop"><br />
+    <div id="progress"></div>
+</div>
+
+<!--testbox //-->
+<div id="testbox" class="box">
+    <input type="submit" value="test" id="test"><br />
+    <div id="testresult"></div>
+</div
+
+<!--questionbox //-->
+<div id="questionbox" class="box">
+<b>Exercices</b><br />
+<ol>
+<li>Select the boolean function OR in the truth table and <i>train</i> the network. After training finished, click <i>test</i>.</li>
+<li>Check which out the 16 possible patterns can be learned with the simple perceptron.</li>
+<li>Compare the number of iterations needed to learn a boolean function with the clip, step activation function and sigmoid activation function.</li>
+<li>Is there an optimal value for the learning rate?</li>
+<li>Not all patterns can be classified correctly. Why?</li>
+</ol>
+</div>
+
+
+</body>
+
+</html>
